@@ -13,7 +13,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding fullscreen>
 
   <ion-refresher (ionRefresh)="doRefresh($event)">
     <ion-refresher-content>
@@ -22,7 +22,7 @@
   </ion-refresher>
 
   <ion-list [reorder]="shouldReorder"(ionItemReorder)="$event.applyTo(people)">
-    <ion-item-sliding *ngFor="let person of people">
+    <ion-item-sliding *ngFor="let person of people" (click)="pushPage(person)">
       <ion-item>
         
         <ion-avatar item-left>
