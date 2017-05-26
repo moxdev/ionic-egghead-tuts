@@ -17,6 +17,9 @@ export class DetailPage {
   public user = this.navParams.data
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    setTimeout( () => {
+      this.navCtrl.pop()
+    }, 2000)
   }
 
   ionViewDidLoad() {
